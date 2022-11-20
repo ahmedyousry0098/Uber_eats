@@ -13,7 +13,7 @@ const DrawerNavigator = () => (
     <Drawer.Navigator
         screenOptions={({route}) => ({
             drawerStyle: {width: "50%"},
-            swipeEdgeWidth: 150,
+            swipeEdgeWidth: 50,
             drawerPosition: "right",
             headerPressColor: "red",
             headerShown: false,

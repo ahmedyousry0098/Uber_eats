@@ -2,6 +2,7 @@ import React from "react";
 import {View, Text, StyleSheet, SafeAreaView} from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import ROUTES from "../constant/routes"
+import COLORS from "../constant/colors"
 
 const HeaderTaps = ({active, navigate}) => {
 
@@ -14,7 +15,7 @@ const HeaderTaps = ({active, navigate}) => {
                 <View style={
                     {
                         width: 100,
-                        backgroundColor: active === ROUTES.DELIVERY ? "black": "white",
+                        backgroundColor: active === ROUTES.DELIVERY ? COLORS.BLACK: COLORS.WHITE,
                         alignItems: "center",
                         borderTopLeftRadius: 20,
                         borderBottomLeftRadius: 10,
@@ -23,7 +24,7 @@ const HeaderTaps = ({active, navigate}) => {
                     }
                 }>
                     <Text style={{
-                        color: active === ROUTES.DELIVERY ? "white" : "black",
+                        color: active === ROUTES.DELIVERY ? COLORS.WHITE : COLORS.BLACK,
                         fontSize: 20,
                         fontWeight: "bold",
                         paddingVertical: 5,
@@ -38,7 +39,7 @@ const HeaderTaps = ({active, navigate}) => {
                 <View style={
                     {
                         width: 100,
-                        backgroundColor: active === ROUTES.PICK_UP ? "black": "white",
+                        backgroundColor: active === ROUTES.PICK_UP ? COLORS.BLACK: COLORS.WHITE,
                         alignItems: "center",
                         borderTopLeftRadius: 10,
                         borderBottomLeftRadius: 5,
@@ -47,7 +48,7 @@ const HeaderTaps = ({active, navigate}) => {
                     }
                 }>
                     <Text style={{
-                        color: active === ROUTES.PICK_UP ? "white" : "black",
+                        color: active === ROUTES.PICK_UP ? COLORS.WHITE : COLORS.BLACK,
                         fontSize: 20,
                         fontWeight: "bold",
                         paddingVertical: 5,

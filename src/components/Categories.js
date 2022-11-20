@@ -1,7 +1,7 @@
 import React from "react";
 import {View, Text, Image, FlatList, StyleSheet} from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
-import RestaurantsContext from "../context/RestaurantsContext";
+import COLORS from "../constant/colors"
 
 const categData = [
     {
@@ -21,15 +21,15 @@ const categData = [
         image: require("../../assets/images/desserts.png"),
     },
     {
-        name: "fast-food",
+        name: "fast food",
         image: require("../../assets/images/fast-food.png"),
     },
     {
-        name: "shopping-bag",
+        name: "shopping bag",
         image: require("../../assets/images/shopping-bag.png"),
     },
     {
-        name: "soft-drink",
+        name: "soft drink",
         image: require("../../assets/images/soft-drink.png"),
     },
     {
@@ -66,7 +66,7 @@ const Categories = ({activeCategory, setActiveCategory}) => {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: "rgb(255,255,255)",
+        backgroundColor: COLORS.WHITE,
         marginBottom: 20,
         height: 57,
         marginHorizontal: 5,
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
         marginHorizontal: 5,
         marginVertical: 3,
         width: 90,
-        backgroundColor: "rgb(255, 255, 255)",
+        backgroundColor: COLORS.WHITE,
         justifyContent: "center",
         alignItems: "center",
         padding: 2,
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
         marginHorizontal: 5,
         marginVertical: 3,
         width: 90,
-        backgroundColor: "rgb(240, 240, 240)",
+        backgroundColor: COLORS.GRAY.ONE,
         justifyContent: "center",
         alignItems: "center",
         padding: 2,
@@ -107,12 +107,6 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.1,
         shadowRadius: 3
     },
-    boxShadow: {
-        shadowColor: "black",
-        shadowOffset: {width: -1, height: 3},
-        shadowOpacity: 0.2,
-        shadowRadius: 3
-    }
 });
 
 export default Categories

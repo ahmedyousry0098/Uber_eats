@@ -13,8 +13,7 @@ const About = ({restaurant, details}) => {
     const navigation = useNavigation();
     const [activeImg, setActiveImg] = useState(0);
 
-    const onChange = (nativeEvent, scrollEventThrottle) => {
-        console.log(scrollEventThrottle)
+    const onChange = (nativeEvent) => {
         if (nativeEvent) {
             const slide = Math.ceil(nativeEvent.contentOffset.x / nativeEvent.layoutMeasurement.width);
             if (slide != activeImg) {
@@ -45,9 +44,10 @@ const About = ({restaurant, details}) => {
                 <ScrollView 
                     style={styles.imgScroller}
                     horizontal
-                    onScroll={({nativeEvent,scrollEventThrottle}) => onChange(nativeEvent,scrollEventThrottle)}
+                    onScroll={({nativeEvent}) => onChange(nativeEvent)}
                     pagingEnabled
                     showsHorizontalScrollIndicator={false}
+                    scrollEventThrottle={16}
                 >
                     {
                         details?.photos?.map((e) => {

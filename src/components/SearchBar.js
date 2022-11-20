@@ -1,6 +1,7 @@
 import React from "react";
 import {View, TouchableOpacity, TextInput, StyleSheet} from "react-native";
 import { Ionicons } from '@expo/vector-icons';
+import COLORS from "../constant/colors"
 
 const SearchBar = ({searchTerm, setSearchTerm}) => {
 
@@ -16,7 +17,7 @@ const SearchBar = ({searchTerm, setSearchTerm}) => {
             <TextInput
                 style={styles.input}
                 placeholder="Search.."
-                placeholderTextColor={"rgb(200,200,200)"}
+                placeholderTextColor={COLORS.GRAY.FOUR}
                 value={searchTerm}
                 onChangeText={(e) => {
                     setSearchTerm(e);
@@ -41,7 +42,7 @@ const styles = StyleSheet.create({
         marginVertical: 20,
         flexDirection: "row",
         justifyContent: "center",
-        backgroundColor: "rgb(255, 255, 255)",
+        backgroundColor: COLORS.WHITE,
         borderRadius: 15,
         height: 50,
     },
@@ -67,7 +68,7 @@ const styles = StyleSheet.create({
         fontWeight: "bold"
     },
     shadow: {
-        shadowColor: "black",
+        shadowColor: COLORS.BLACK,
         shadowOffset: {width: -3, height: 5},
         shadowOpacity: 0.08,
         shadowRadius: 3
@@ -121,4 +122,3 @@ export default SearchBar;
                     </View>
                 }}
             /> */}
-

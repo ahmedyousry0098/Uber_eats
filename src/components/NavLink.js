@@ -7,7 +7,6 @@ const NavLink = () => {
         <View style={styles.container}>
             <Button 
                 title="haven't account? Sign up first"
-                
             />
         </View>
     )

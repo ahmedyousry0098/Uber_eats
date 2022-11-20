@@ -1,5 +1,5 @@
-import React, {useState} from "react";
-import {View, Text, TextInput, StyleSheet} from "react-native";
+import React, {useState, useRef, useEffect} from "react";
+import {View, Text, TextInput, StyleSheet, Keyboard} from "react-native";
 import {Button} from "@rneui/themed"
 import { FontAwesome5 } from '@expo/vector-icons';
 
@@ -32,6 +32,7 @@ const AuthForm = ({signIn}) => {
                     secureTextEntry
                     value={password}
                     onChangeText={setPassword}
+                    onEndEditing
                 />
             </View>
 

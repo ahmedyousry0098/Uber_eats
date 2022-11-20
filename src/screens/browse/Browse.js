@@ -1,12 +1,15 @@
-import React from "react";
-import {View, Text, StyleSheet} from "react-native";
+import React, {useEffect} from "react";
+import {View, Text, StyleSheet, Alert} from "react-native";
 import ToggleDrawerIcon from "../../components/ToggleDrawerIcon";
 
 const Browse = () => {
+
+    useEffect(() => {
+        Alert.alert("This page will be available later..")
+    })
     return (
         <View style={styles.container}>
             <ToggleDrawerIcon />
-            <Text>Browse</Text>
         </View>
     )
 };
